@@ -1,5 +1,5 @@
 class Task < ApplicationRecord
-    def a
-        p "b"
-    end
+    # def a
+    #     p "b"
+    # end
 end
