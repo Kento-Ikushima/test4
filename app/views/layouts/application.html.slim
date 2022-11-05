@@ -8,4 +8,9 @@ html
     = csp_meta_tag
     = stylesheet_link_tag "application", "data-turbo-track": "reload"
   body
-    = yield
+    .app-title.naber.naber-expand-md.naber-light.bg-light
+      .naber-brand Test4
+    .container
+      - if flash.notice.present?
+        .alert.alert-success= flash.notice
+      = yield
