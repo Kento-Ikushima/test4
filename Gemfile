@@ -41,6 +41,7 @@ gem "tzinfo-data"
 gem 'slim-rails'
 gem 'html2slim'
 # gem 'bootstrap'
+gem 'annotate'
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 

@@ -1,10 +1,21 @@
-p style="color: green" = notice
+h1 タスクの詳細
 
-== render @task
-
-div
-  => link_to "Edit this task", edit_task_path(@task)
-  '|
-  =< link_to "Back to tasks", tasks_path
-
-  = button_to "Destroy this task", @task, method: :delete
+.nav.justify-content-end
+  = link_to '一覧', tasks_path, class: 'nav-link'
+table.table.table-hover
+  tbody
+    tr
+      th= Task.human_attribute_name(:id)
+      td= @task.id
+    tr
+      th= Task.human_attribute_name(:name)
+      td= @task.name
+    tr
+      th= Task.human_attribute_name(:description)
+      td= @task.description
+    tr
+      th= Task.human_attribute_name(:create_at)
+      td= @task.created_at
+    tr
+      th= Task.human_attribute_name(:update_at)
+      td= @task.updated_at
