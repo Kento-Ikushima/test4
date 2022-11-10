@@ -6,8 +6,13 @@ class TasksController < ApplicationController
     @tasks = Task.all
   end
 
+  def set_task
+    @task = Task.find(params[:id])
+  end
+
   # GET /tasks/1 or /tasks/1.json
   def show
+    @task = Task.find(params[:id])
   end
 
   # GET /tasks/new
