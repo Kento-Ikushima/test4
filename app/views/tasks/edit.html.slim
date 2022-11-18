@@ -10,4 +10,7 @@ h1 タスクの編集
   .form_group
     = f.label :description
     = f.text_area :description, rows: 5, class: 'form-control', id: 'task_description'
+  .form_group
+    = f.label :task_image
+    = f.file_field :task_image, class: 'form-control', id: 'task_task_image'
   = f.submit nil, class: 'btn-primary'
