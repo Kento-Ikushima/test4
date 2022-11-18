@@ -35,7 +35,7 @@ class TasksController < ApplicationController
   # POST /tasks or /tasks.json
   def create
     @task = current_user.tasks.new(task_params)
-    @task.save!
+    @task.save
     redirect_to tasks_url, notice: "タスク「#{@task.name}」を登録しました。"
    
   end
@@ -65,7 +65,7 @@ class TasksController < ApplicationController
 
   private
   def task_params
-    params.require(:task).permit(:name, :description)
+    params.require(:task).permit(:name, :description, :image)
   end
 
 end
