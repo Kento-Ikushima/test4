@@ -5,3 +5,5 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+id: 15, name: "seedsでうってみた", description: "どうだ",user_id: 2,
+  task_image: スクリーンショット (1).png
