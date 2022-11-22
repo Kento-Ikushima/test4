@@ -13,5 +13,6 @@ h1 タスクの編集
   .form_group
     = f.label :task_image
     = f.file_field :task_image, class: 'form-control', id: 'task_task_image'
-    
+
+    = image_tag @task.task_image.url, size: "222x111" 
   = f.submit nil, class: 'btn-primary'
