@@ -35,6 +35,9 @@ class TasksController < ApplicationController
   # POST /tasks or /tasks.json
   def create
     @task = current_user.tasks.new(task_params)
+    url = params[:task][:title]
+    url = url.last(11)
+    @task.title = url
     @task.save
     redirect_to tasks_url, notice: "タスク「#{@task.name}」を登録しました。"
    
