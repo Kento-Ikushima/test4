@@ -13,4 +13,7 @@ h1 タスクの新規登録
   .form_group
     = f.label :task_image
     = f.file_field :task_image, class: 'form-control', id: 'task_task_image'
+  .form_group
+    = f.label :title
+    = f.text_field :title, class: 'form-control', id: 'task_title'
   = f.submit nil, class: 'btn-primary'

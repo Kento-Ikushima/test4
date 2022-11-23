@@ -21,5 +21,5 @@ table.table.table-hover
       td= @task.updated_at
     
     = image_tag @task.task_image.url, size: "222x111"
-
+    iframe width="560" height="315" src="https://www.youtube.com/embed/#{@task.title}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
 = link_to '編集', edit_task_path(@task), class: 'btn btn-primary mr-3'
